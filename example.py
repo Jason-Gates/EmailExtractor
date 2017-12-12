@@ -8,5 +8,5 @@ srv = EmailExtractor.EmailExtractor(username="test",
                                   elastic_index="spamtrap",
                                   ssl=True)
 if srv.connect():
-    srv.process(criterion="ALL")
+    srv.process(criterion="ALL", move_message=True)
     srv.close()
